@@ -75,7 +75,6 @@ width:*;
 float: left;
 padding:10px;
 font-family: Delius, sans serif;
-justify-content: center;
 }
 
 .image-gallery {
@@ -105,7 +104,7 @@ body {
 font-family: Delius;
 background-color:#f2b0b0;
 color: #111111;
-justify-content: center;
 }
+
 
 
