@@ -105,5 +105,6 @@ body {
 font-family: Delius;
 background-color:#f2b0b0;
 color: #111111;
-align: left;
+justify-content: center;
 }
+
