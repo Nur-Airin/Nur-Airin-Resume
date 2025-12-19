@@ -1,0 +1,237 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css"
+href="style_1.css" />
+<title>CONTACT INFO</title>
+<style>
+
+/* Page center setup */
+
+/* Container for horizontal layout */
+.card-container {
+  display: flex;                /* Makes items line up horizontally */
+  justify-content: center;      /* Centers cards horizontally */
+  align-items: center;          /* Aligns cards vertically */
+  gap: 30px;                    /* Space between cards */
+  margin-top: 50px;
+margin-bottom: 50px;
+  flex-wrap: wrap;              /* Wraps on small screens */
+}
+
+/* Flip card container */
+.flip-card {
+  background-color: transparent;
+  width: 450px;
+  height: 300px;
+  perspective: 1000px; /* Creates 3D effect */
+}
+
+/* Inner card */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover{
+transform: translateY(-6px);
+transition: transform 0.3s ease;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Front & back sides */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+color: black;
+}
+
+.flip-card-front img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.flip-card-back a:hover {
+    text-decoration: underline;
+}
+
+/*  Color variations */
+.blue-front { background-color: #1876f2; }
+.blue-back  { background-color: #1876f2; }
+
+.pink-front  { background-color: #d93692; }
+.pink-back   { background-color: #d93692; }
+
+.green-front { background-color: #26eb36; }
+.green-back  { background-color: #26eb36; }
+
+.cyan-front { background-color: #0088cc; }
+.cyan-back  { background-color: #0088cc; }
+
+.red-front { background-color: #cc0c0c; }
+.red-back  { background-color: #cc0c0c; }
+
+@media (max-width: 600px) {
+    .flip-card {
+        width: 90%;
+        height: 260px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>My Resume</h1>
+<div id="datetime"></div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about_me.html">About Me</a></li>
+<li><a href="family.html">Family</a>
+	<ul>
+	<li><a href="parents.html">Parents</a></li>
+	<li><a href="siblings.html">Siblings</a></li>
+	<li><a href="pets.html">Pets</a></li>
+	</ul>
+</li>
+<li><a href="education.html">Education</a></li>
+<li><a href="hobbies.html">Hobbies and Interest</a></li>
+<li><a href="quotes.html">Quotes</a></li>
+<li><a href="contact.html">Contact Info</a></li>
+</nav>
+
+<section>
+<div class="container">
+<h2 class="section-title">Contact Me</h2>
+<p class="intro-text">
+You can reach me through the platforms below.
+</p>
+
+<div class="card-container">
+
+  <!-- Blue Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front blue-front"><img title="Facebook" src="fb.png" alt="Facebook"></div>
+      <div class="flip-card-back blue-back"><a href="https://www.facebook.com/nurairin.nurairin" target="_blank">Nur Airin Mohd Helme</a></div>
+    </div>
+  </div>
+
+  <!-- Red Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front pink-front"><img title="Instagram" src="ig.png" alt="Instagram"></div>
+      <div class="flip-card-back pink-back"><a href="https://www.instagram.com/airinhelme/" target="_blank">@airinhelme</a></div>
+    </div>
+  </div>
+
+  <!-- Green Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front green-front"><img title="Whatsapp" src="ws.png" alt="Whatsapp"></div>
+      <div class="flip-card-back green-back"><a href="https://wa.me/0192436077" target="_blank">+60192436077</a></div>
+    </div>
+  </div>
+
+  <!-- Cyan Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front cyan-front"><img title="Telegram" src="tg.png" alt="Telegram"></div>
+      <div class="flip-card-back cyan-back"><a href="https://t.me/AirinHelme" target="_blank">@AirinHelme</a></div>
+    </div>
+  </div>
+
+  <!-- Red Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front red-front"><img title="Gmail" src="gm.png" alt="Gmail"></div>
+      <div class="flip-card-back red-back"><a href="mailto:nurairin05@gmail.com" target="_blank">nurairin05@gmail.com</a>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+
+</section>
+<footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+
+    function updateDateTime() {
+        const now = new Date();
+
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+
+        document.getElementById("datetime").textContent =
+            now.toLocaleDateString('en-US', options);
+    }
+
+    updateDateTime();               // run once immediately
+    setInterval(updateDateTime, 1000); // update every second
+</script>
+
+</body>
+
+
+</html>

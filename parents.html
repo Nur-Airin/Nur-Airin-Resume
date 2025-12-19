@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css"
+href="style_1.css" />
+<link rel="stylesheet" type="text/css"
+href="family.css" />
+<title>PARENTS</title>
+</head>
+
+<body>
+
+<header>
+<h1>My Resume</h1>
+<div id="datetime"></div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about_me.html">About Me</a></li>
+<li><a href="family.html">Family</a>
+	<ul>
+	<li><a href="parents.html">Parents</a></li>
+	<li><a href="siblings.html">Siblings</a></li>
+	<li><a href="pets.html">Pets</a></li>
+	</ul>
+</li>
+<li><a href="education.html">Education</a></li>
+<li><a href="hobbies.html">Hobbies and Interest</a></li>
+<li><a href="quotes.html">Quotes</a></li>
+<li><a href="contact.html">Contact Info</a></li>
+</nav>
+
+<section>
+<div class="container">
+<h2>My Parents</h2>
+
+<p class="intro-text">
+This section is dedicated to my parents. They recently celebrated their 30th anniversary and are looking forward to many more years together.
+</p>
+<div class="profile-cards cols-2">
+
+    <div class="profile-card darkblue">
+        <img src="mom_1.jpg" alt="Mother">
+        <h4>Azura binti Mohd Don</h4>
+    </div>
+
+    <div class="profile-card black">
+        <img src="dad_1.jpg" alt="Father">
+        <h4>Mohd Helme bin Mohd Helan</h4>
+    </div>
+</div>
+<br>
+<div class="anniversary-box">
+    💍 Celebrating 30 years of love, patience, and partnership.
+</div>
+
+
+<hr class="custom-hr">
+
+<div class="image-gallery">
+<div class="person">
+<img title="Me and Mom" src="mom_2.jpg" alt="Me and Mom">
+</div>
+<div class="person">
+<img title="Me and Dad" src="dad_2.jpg" alt="Me and Dad">
+</div>
+<div class="person">
+<img title="Mom and Dad" src="momdad_2.jpg" alt="Mom and Dad">
+</div>
+</div>
+<p class="caption"><b>Family Moments</b></p>
+
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+
+</div>
+</section>
+
+<footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+
+    function updateDateTime() {
+        const now = new Date();
+
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+
+        document.getElementById("datetime").textContent =
+            now.toLocaleDateString('en-US', options);
+    }
+
+    updateDateTime();               // run once immediately
+    setInterval(updateDateTime, 1000); // update every second
+</script>
+
+</body>
+
+
+</html>

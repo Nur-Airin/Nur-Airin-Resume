@@ -1,0 +1,175 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css"
+href="style_1.css" />
+<link rel="stylesheet" type="text/css"
+href="family.css" />
+<title>PETS</title>
+</head>
+
+<body>
+
+<header>
+<h1>My Resume</h1>
+<div id="datetime"></div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about_me.html">About Me</a></li>
+<li><a href="family.html">Family</a>
+	<ul>
+	<li><a href="parents.html">Parents</a></li>
+	<li><a href="siblings.html">Siblings</a></li>
+	<li><a href="pets.html">Pets</a></li>
+	</ul>
+</li>
+<li><a href="education.html">Education</a></li>
+<li><a href="hobbies.html">Hobbies and Interest</a></li>
+<li><a href="quotes.html">Quotes</a></li>
+<li><a href="contact.html">Contact Info</a></li>
+</nav>
+
+<section>
+<div class="container">
+<h2>My Pets</h2>
+
+<p class="intro-text">This is a special section that I want to dedicate to my cats. I have been a cat owner since I was 5 and theses cats have been a part of my life and has helped me through some of the toughtest times. So, I personally think they deserve their own page as they also represent a part of me! &#128568</p>
+
+<hr class="custom-hr">
+
+<div class="profile-cards cols-2">
+<div class="profile-card yellow">
+<img title="LEO" src="leo.jpg" alt="Leo">
+<h4>Leo</h4>
+</div>
+<div class="profile-card pink">
+<img title="KIWI" src="kiwi.jpeg" alt="Kiwi">
+<h4>Kiwi</h4>
+</div>
+</div>
+
+<p class="caption"> Batch 1: 20/12/2020</p>
+
+<hr class="custom-hr">
+
+<div class="profile-cards cols-4">
+<div class="profile-card black">
+<img title="CUMI" src="cumi.jpg" alt="Cumi">
+<h4>Cumi</h4>
+</div>
+<div class="profile-card darkblue">
+<img title="OMOT" src="omot.jpg" alt="Omot">
+<h4>Omot</h4>
+</div>
+<div class="profile-card darkgreen">
+<img title="QUINN" src="quinn.jpg" alt="Quinn">
+<h4>Quinn</h4>
+</div>
+<div class="profile-card darkpink">
+<img title="JULIE" src="julie.jpg" alt="Julie">
+<h4>Julie</h4>
+</div>
+</div>
+
+<p class="caption"> Batch 2: 26/4/2021</p>
+
+<hr class="custom-hr">
+
+<div class="profile-cards cols-2">
+<div class="profile-card lightblue">
+<img title="MIKI" src="miki.jpg" alt="Miki">
+<h4>Miki</h4>
+</div>
+<div class="profile-card orange">
+<img title="OYEN" src="oyen.jpg" alt="Oyen">
+<h4>Oyen</h4>
+</div>
+</div>
+
+<p class="caption"> Batch 3: 5/4/2022</p>
+
+<hr class="custom-hr">
+
+<div class="profile-cards cols-3">
+<div class="profile-card orange">
+<img title="COCO" src="coco.jpg" alt="Coco">
+<h4>Coco</h4>
+</div>
+<div class="profile-card lightgreen">
+<img title="PANDAK" src="pandak.jpg" alt="Pandak">
+<h4>Pandak</h4>
+</div>
+<div class="profile-card red">
+<img title="TAM" src="tam.jpg" alt="Tam">
+<h4>Tam</h4>
+</div>
+</div>
+
+<p class="caption"> Batch 4: 12/11/2023</p>
+
+<hr class="custom-hr">
+<hr class="custom-hr">
+
+<p class="intro-text">This last one is a special mention. She's gone missing for over 3 years at this point but will always be remembered. She is the mother of the other cats and grandma to batch 4. Thus, she is special in her own way&#128149</p> 
+
+<div class="profile-cards cols-1">
+<div class="profile-card purple">
+<img title="MUMMY" src="mummy.jpg" alt="Mummy">
+<h4>Mummy / Putih</h4>
+</div>
+</div>
+<br>
+</div>
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+
+</section>
+<footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+
+    function updateDateTime() {
+        const now = new Date();
+
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+
+        document.getElementById("datetime").textContent =
+            now.toLocaleDateString('en-US', options);
+    }
+
+    updateDateTime();               // run once immediately
+    setInterval(updateDateTime, 1000); // update every second
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css"
+href="style_1.css" />
+<link rel="stylesheet" type="text/css"
+href="family.css" />
+<title>FAMILY</title>
+</head>
+
+<body>
+
+<header>
+<h1>My Resume</h1>
+<div id="datetime"></div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about_me.html">About Me</a></li>
+<li><a href="family.html">Family</a>
+	<ul>
+	<li><a href="parents.html">Parents</a></li>
+	<li><a href="siblings.html">Siblings</a></li>
+	<li><a href="pets.html">Pets</a></li>
+	</ul>
+</li>
+<li><a href="education.html">Education</a></li>
+<li><a href="hobbies.html">Hobbies and Interest</a></li>
+<li><a href="quotes.html">Quotes</a></li>
+<li><a href="contact.html">Contact Info</a></li>
+</nav>
+
+<section >
+<div class="container">
+<h2>My Family</h2>
+<p class="intro-text">In this section, I will be focusing on my family members. Each part have their own different page, so feel free to check them out!! &#128568<br></p>
+
+<div class="family-gallery">
+
+    <div class="family-card">
+        <a href="parents.html">
+            <img src="momdad_1.jpg" alt="Parents">
+        </a>
+        <p>Parents</p>
+    </div>
+
+    <div class="family-card">
+        <a href="siblings.html">
+            <img src="sibs_1.jpg" alt="Siblings">
+        </a>
+        <p>Siblings</p>
+    </div>
+
+    <div class="family-card">
+        <a href="pets.html">
+            <img src="mummy.jpg" alt="Pets">
+        </a>
+        <p>Pets</p>
+    </div>
+
+<hr class="custom-hr">
+
+</div>
+<div class="image-gallery">
+<div class="person">
+<img src="family_1.jpg" alt="Family">
+</div>
+<div class="person">
+<img src="family_2.heic" alt="Family">
+</div>
+
+</div>
+
+<p class="caption"><b> My Family</b></p>
+
+
+<br>
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+
+
+</div>
+</section>
+<footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+
+    function updateDateTime() {
+        const now = new Date();
+
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+
+        document.getElementById("datetime").textContent =
+            now.toLocaleDateString('en-US', options);
+    }
+
+    updateDateTime();               // run once immediately
+    setInterval(updateDateTime, 1000); // update every second
+</script>
+
+</body>
+
+
+</html>
