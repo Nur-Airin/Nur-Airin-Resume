@@ -3,13 +3,15 @@
 <head>
 <link rel="stylesheet" type="text/css"
 href="style_1.css" />
+<link rel="stylesheet" type="text/css"
+href="family.css" />
 <title>FAMILY</title>
 </head>
 
 <body>
 
 <header>
-<h1>MY RESUME</h1>
+<h1>My Resume</h1>
 </header>
 
 <nav>
@@ -29,22 +31,70 @@ href="style_1.css" />
 <li><a href="contact.html">Contact Info</a></li>
 </nav>
 
-<section>
-<center>In this section, I will be focusing on my family members. Each part have their own different page, so feel free to check them out!!<br><br>
+<section >
+<div class="container">
+<h2>My Family</h2>
+<p class="intro-text">In this section, I will be focusing on my family members. Each part have their own different page, so feel free to check them out!! &#128568<br></p>
 
-<div class="image-gallery">
-<a href="parents.html"><img title="PARENTS" src="momdad_1.jpg" alt="Parents"></a>
-<a href="siblings.html"><img title="SIBLINGS" src="sibs_1.jpg" alt="Siblings"></a>
-<a href="pets.html"><img title="CATS" src="mummy.jpg" alt="Cats"></a>	
+<div class="family-gallery">
+
+    <div class="family-card">
+        <a href="parents.html">
+            <img src="momdad_1.jpg" alt="Parents">
+        </a>
+        <p>Parents</p>
+    </div>
+
+    <div class="family-card">
+        <a href="siblings.html">
+            <img src="sibs_1.jpg" alt="Siblings">
+        </a>
+        <p>Siblings</p>
+    </div>
+
+    <div class="family-card">
+        <a href="pets.html">
+            <img src="mummy.jpg" alt="Pets">
+        </a>
+        <p>Pets</p>
+    </div>
+
 </div>
 
-<br>
-</section>
-</body>
+<p class="caption"><b> My Family</b></p>
 
+
+<br>
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+
+
+</div>
+</section>
 <footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+</script>
+
+</body>
 
 
 </html>
-
-
