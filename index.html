@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" type="text/css"
 href="style_1.css" />
+<link rel="stylesheet" type="text/css"
+href="index.css" />
 <title>HOME</title>
 
 </head>
@@ -10,7 +12,7 @@ href="style_1.css" />
 <body>
 
 <header>
-<h1>MY RESUME</h1>
+<h1>My Resume</h1>
 </header>
 
 <nav>
@@ -31,29 +33,63 @@ href="style_1.css" />
 </nav>
 
 <section>
+<div class="container">
+<div class="home-hero">
+    <img src="me_1.jpg" alt="Photo of Airin" class="hero-img">
 
-<div class="grid-container; image-gallery">
-    <img src="me_1.jpg" alt="Description">
-    <div class="text-content">
-<p><b>HI! My name is Nur Airin binti Mohd Helme <br>
-Welcome to my Resume Form<br>
-Across the pages, you will find information regarding my personal life regarding my family members, <br> education background, and  hobbies.<br>
-I hope you enjoy your time here &#128522</b></p>
+    <div class="hero-text">
+        <h2>Hi, I’m Airin &#128075</h2>
+        <p>
+            Welcome to my resume website!  
+            Here you’ll find information about my family, education background, and hobbies.
+            I hope you enjoy exploring my journey &#128522
+        </p>
+
+        <a href="about_me.html" class="hero-btn">Get to know me</a>
     </div>
 </div>
 
+<div class="quick-links">
 
+    <a href="about_me.html" class="quick-card">👤 About Me</a>
+    <a href="education.html" class="quick-card">🎓 Education</a>
+    <a href="hobbies.html" class="quick-card">🎨 Hobbies</a>
 
-<audio controls autoplay loop>
-<source src="song2.mp3" type="audio/mpeg">
+</div>
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
 </audio>
 
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+<p>Background Music<br>
+Music track: Sky Clearing by Epic Spectrum<br>
+Source: https://freetouse.com/music<br>
+Vlog Music for Videos (Free Download)</p>
+</div>
 </section>
 
-</body>
 
 <footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
 
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+</script>
+
+</body>
+
 
 </html>
-
