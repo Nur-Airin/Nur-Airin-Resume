@@ -3,13 +3,15 @@
 <head>
 <link rel="stylesheet" type="text/css"
 href="style_1.css" />
+<link rel="stylesheet" type="text/css"
+href="family.css" />
 <title>PARENTS</title>
 </head>
 
 <body>
 
 <header>
-<h1>MY RESUME</h1>
+<h1>My Resume</h1>
 </header>
 
 <nav>
@@ -30,25 +32,74 @@ href="style_1.css" />
 </nav>
 
 <section>
-<center>This section is dedicated to my Parents. They just recently celebrated their 30th anniversary and are looking at more years together<br>
+<div class="container">
+<h2>My Parents</h2>
 
-<div class="image-gallery">
-<img title="MOM" src="mom_1.jpg" alt="Mom">
-<img title="DAD" src="dad_1.jpg" alt="Dad">
-<img title="PARENTS" src="momdad_2.jpg" alt="Parents">
+<p class="intro-text">
+This section is dedicated to my parents. They recently celebrated their 30th anniversary and are looking forward to many more years together.
+</p>
+<div class="parents-cards">
+
+    <div class="parent-card">
+        <img src="mom_1.jpg" alt="Mother">
+        <h4>Azura Mohd Don</h4>
+    </div>
+
+    <div class="parent-card">
+        <img src="dad_1.jpg" alt="Father">
+        <h4>Mohd Helme bin Mohd Helme</h4>
+    </div>
+</div>
+<div class="anniversary-box">
+    💍 Celebrating 30 years of love, patience, and partnership.
 </div>
 
-<caption><b> Azura Mohd Don & MOhd Helme Mohd Helan</b></caption>
 
+<hr class="custom-hr">
+
+<div class="image-gallery">
+<div class="person">
+<img title="Me and Mom" src="mom_2.jpg" alt="Me and Mom">
+</div>
+<div class="person">
+<img title="Me and Dad" src="dad_2.jpg" alt="Me and Dad">
+</div>
+<div class="person">
+<img title="Mom and Dad" src="momdad_2.jpg" alt="Mom and Dad">
+</div>
+</div>
+<p class="caption"><b>Family Moments</b></p>
+
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-btn" onclick="toggleMusic()">🎵</button>
+<br>
+
+</div>
 </section>
-</body>
 
 <footer>Copyright: NUR AIRIN BINTI MOHD HELME</footer>
 
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊";
+        } else {
+            music.pause();
+            button.textContent = "🎵";
+        }
+    }
+</script>
+
+</body>
+
 
 </html>
-
-
-
-
-
