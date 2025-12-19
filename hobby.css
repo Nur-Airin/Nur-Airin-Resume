@@ -1,0 +1,186 @@
+.hobby-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in one row */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+    .hobby-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hobby-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.hobby-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-6px);
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.hobby-card h4 {
+    margin: 15px 0 5px;
+}
+
+.hobby-card p {
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+/* Container for all cards */
+.movie-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    justify-items: center;
+}
+
+
+/* Card size */
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+
+/* Inner card */
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & back */
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Front side */
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Back side */
+
+.flip-back {
+    color: #111;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+/* Individual card colors */
+.flip-card.orange .flip-back {
+    background: #fa9716;
+}
+
+.flip-card.blue .flip-back {
+    background: #457dff;
+}
+
+.flip-card.red .flip-back {
+    background: #ff455b;
+}
+
+.flip-card.green .flip-back {
+    background: #00d688;
+}
+
+.flip-back h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.flip-back p {
+    font-size: 14px;
+}
+
+.flip-card:active .flip-inner {
+    transform: rotateY(180deg);
+}.flip-card:active .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.video-gallery video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.video-gallery video:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+.video-gallery video {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+
+@media (max-width: 900px) {
+    .movie-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+}

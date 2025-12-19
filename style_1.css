@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Pattaya&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+header {
+background-color: #ea6464;
+color: #111111;
+text-align: center;
+padding:20px;
+font-family: Pattaya, sans-serif;
+}
+
+#datetime {
+    text-align: right;
+    font-size: 14px;
+    padding: 5px 20px;
+    color: #111;
+    background-color: #ea6464;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+margin: 0;
+}
+
+body {
+font-family: Delius;
+background-color:#f2b0b0;
+line-height: 1.6;
+color: #111111;
+text-align: left;
+justify-content: center;
+align-items: center;
+margin: auto;
+}
+ 
+/* Navigation bar container */
+nav {
+background-color: #ea6464;
+}
+
+/* Main menu */
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+position: relative; /* Needed for dropdown positioning */
+}
+
+/* Main menu links */
+nav ul li a {
+display: block;
+padding: 15px 20px;
+color: #111111;
+text-decoration: none;
+font-family: Winky Sans, sans-serif;
+}
+
+nav ul li a:hover {
+background-color: #e43737;
+}
+
+/* Dropdown menu */
+nav ul li ul {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #ea6464;
+min-width: 180px;
+flex-direction: column;
+z-index: 1000;
+}
+
+/* Dropdown links */
+nav ul li ul li a {
+padding: 12px 15px;
+}
+
+nav ul li ul li a:hover {
+background-color: #e43737;
+}
+
+/* Show dropdown on hover */
+nav ul li:hover ul {
+display: block;
+}
+    
+section {
+width: 100%;
+float: left;
+padding:10px;
+font-family: Delius, sans-serif;
+text-align: left;
+}
+
+.container {
+background-color: #eb8484;   /* Background color */
+padding: 20px;               /* Space inside the box */
+width: 95%;                 /* 80% of viewport width */
+max-width:1200px;
+margin: 30px auto;            /* Center horizontally */
+border-radius: 10px;          /* Rounded corners */
+box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Shadow */
+overflow: auto;
+display: flex;
+flex-direction: column;
+align-items: center;   /* Horizontal */
+justify-content: center; /* Vertical */
+text-align:left;
+}
+
+.container table {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+}
+
+.intro-text {
+margin-bottom: 20px;
+font-size: 1.1em;
+}
+
+.custom-hr {
+border: none;
+height: 3px;
+background-color: black;
+width: 100%;
+margin: 20px auto;
+}
+
+.image-gallery {
+  display: flex;
+border-radius: 15px;
+  justify-content: center; /* Centers the images horizontally within the container */
+  gap: 15px; /* Optional: adds space between images */
+flex-wrap: wrap;
+margin-bottom: 10px;
+}
+
+.image-gallery img {
+  width: auto; /* Adjust width to fit multiple images in a row */
+  height: 300px;
+  /* Add more styling as needed, such as borders or padding */
+box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+border: 10px solid #e45858;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.person {
+text-align: center;
+}
+
+.person img {
+  width: auto; /* Adjust width to fit multiple images in a row */
+  height: 300px;
+border-radius: 8px;
+  /* Add more styling as needed, such as borders or padding */
+}
+
+.person img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.caption {
+font-size: 1em;
+font-weight: bold;
+margin-top: 10px;
+}
+
+
+#music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #b82121;
+    color: #111;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+#music-btn:hover {
+    transform: scale(1.1);
+}
+
+.info-box {
+    background: #e45858;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+.facts-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+
+
+footer {
+background-color: #ea6464;
+color: #111111;
+clear: both;
+text-align: center;
+padding:5px;
+font-family: Winky Sans, sans-serif;
+}
+

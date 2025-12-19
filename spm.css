@@ -1,0 +1,98 @@
+.section-title {
+    text-align: center;
+    margin-top: 40px;
+    font-family: Pattaya, sans-serif;
+}
+
+/* Grid layout */
+.spm-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+
+/* Card base */
+.spm-card {
+    background-color: #ffffff;
+    padding: 22px 24px;
+    border-radius: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Tablet */
+@media (max-width: 900px) {
+    .spm-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .spm-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hover effect */
+.spm-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+/* Subject text */
+.subject {
+    font-size: 17px;
+}
+
+/* Grade badge */
+.grade {
+    padding: 6px 14px;
+    border-radius: 22px;
+    color: white;
+    font-size: 15px;
+}
+
+/* Grade colors */
+.grade-a-plus .grade {
+    background-color: #2ecc71;
+}
+
+.grade-a .grade {
+    background-color: #3498db;
+}
+
+.grade-b-plus .grade {
+    background-color: #f1c40f;
+    color: #111;
+}
+
+.grade-b .grade {
+    background-color: #f39c12;
+}
+
+.grade-c .grade {
+    background-color: #e74c3c;
+}
+
+/* ✨ A+ Glow Effect */
+.glow {
+    animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(46, 204, 113, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+    }
+}

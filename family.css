@@ -1,0 +1,132 @@
+.family-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.family-card img {
+    width: auto;
+    max-width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.family-card img:hover {
+    transform: scale(1.05);
+}
+
+.family-card p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .family-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-family: Pattaya, sans-serif;
+    margin-bottom: 15px;
+}
+
+.profile-cards {
+    display: grid;
+    gap: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.cols-1 { grid-template-columns: 1fr; }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+
+.profile-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-6px);
+}
+
+.profile-card img {
+    width: auto;
+    max-width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-card h4 {
+    margin-top: 10px;
+}
+
+/* Card color variations */
+.profile-card.yellow {
+    background-color: #fff069;
+}
+.profile-card.pink {
+    background-color: #ff8cdb;
+}
+.profile-card.black {
+    background-color: #212121;
+}
+.profile-card.darkblue {
+    background-color: #0700c9;
+}
+.profile-card.darkgreen {
+    background-color: #076600;
+}
+.profile-card.darkpink {
+    background-color: #cf067e;
+}
+.profile-card.lightblue {
+    background-color: #42d3ff;
+}
+.profile-card.orange {
+    background-color: #fa9632;
+}
+.profile-card.lightgreen {
+    background-color: #8cfa32;
+}
+.profile-card.red {
+    background-color: #ff2929;
+}
+.profile-card.purple {
+    background-color: #9c35f0;
+}
+.profile-card.black,
+.profile-card.darkblue,
+.profile-card.darkgreen,
+.profile-card.darkpink {
+    color: white;
+}
+
+
+@media (max-width: 800px) {
+    .profile-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.anniversary-box {
+    background: #f2b0b0;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
